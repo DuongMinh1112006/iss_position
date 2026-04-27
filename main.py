@@ -40,7 +40,7 @@ if is_dark() and is_overhead():
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWORD)
         connection.sendmail(
-            from_addr =E MAIL,
+            from_addr =EMAIL,
             to_addrs="nguyenduongminh1112006@gmail.com",
             msg="Subject:Look Up!\n\nThe ISS is above you!"
         )
