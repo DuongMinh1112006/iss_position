@@ -5,8 +5,8 @@ import smtplib
 
 EMAIL = os.environ.get("MY_GMAIL")
 PASSWORD = os.environ.get("MY_PASSWORD")
-MY_LAT = -51.2912
-MY_LNG = 12.7167
+MY_LAT = 21.448250
+MY_LNG = 106.198858
 
 
 def is_overhead():
