@@ -1,9 +1,10 @@
 import requests
+import os 
 from datetime import datetime
 import smtplib
 
-MY_EMAIL = "nguyenduongminh1112006@gmail.com"
-MY_PASSWORD = "kyhixglxsigsrfsr"
+EMAIL = os.envion.get("MY_GMAIL")
+PASSWORD = os.environ.get("MY_PASSWORD")
 MY_LAT = 21.448250
 MY_LNG = 106.198858
 
@@ -37,9 +38,9 @@ def is_dark():
 if is_dark() and is_overhead():
     with (smtplib.SMTP("smtp.gmail.com", port=587) as connection):
         connection.starttls()
-        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+        connection.login(user=EMAIL, password=PASSWORD)
         connection.sendmail(
-            from_addr=MY_EMAIL,
+            from_addr =E MAIL,
             to_addrs="nguyenduongminh1112006@gmail.com",
             msg="Subject:Look Up!\n\nThe ISS is above you!"
         )
