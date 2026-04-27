@@ -32,7 +32,7 @@ def is_dark():
     sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
     sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
     now_hour = datetime.now().hour
-    return sunset <= now_hour+7 or now_hour+7 <= sunrise
+    return sunset <= now_hour or now_hour <= sunrise
 
 
 if is_dark():
