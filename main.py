@@ -35,12 +35,11 @@ def is_dark():
     return sunset <= now_hour or now_hour <= sunrise
 
 
-if True:
-    with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
-        connection.starttls()
-        connection.login(user=EMAIL, password=PASSWORD)
-        connection.sendmail(
-            from_addr =EMAIL,
-            to_addrs="nguyenduongminh1112006@gmail.com",
-            msg="Subject:Look Up!\n\nThe ISS is above you!"
-        )
+with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+    connection.starttls()
+    connection.login(user=EMAIL, password=PASSWORD)
+    connection.sendmail(
+        from_addr =EMAIL,
+        to_addrs="nguyenduongminh1112006@gmail.com",
+        msg="Subject:Look Up!\n\nThe ISS is above you!"
+    )
