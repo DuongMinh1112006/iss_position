@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 import smtplib
 
-EMAIL = os.environ.get("MY_GMAIL")
+EMAIL = os.environ.get("MY_EMAIL")
 PASSWORD = os.environ.get("MY_PASSWORD")
 MY_LAT = 21.448250
 MY_LNG = 106.198858
