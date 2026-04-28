@@ -34,7 +34,7 @@ def is_dark():
     now_hour = datetime.now().hour + 7
     return sunset <= now_hour or now_hour <= sunrise
 
-if is_dark():
+if is_dark() and is_overhead():
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=EMAIL, password=PASSWORD)
